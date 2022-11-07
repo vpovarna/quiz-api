@@ -1,7 +1,6 @@
 val scala213 = "2.13.8"
 
 ThisBuild / scalaVersion := scala213
-ThisBuild / name := "quiz-api"
 ThisBuild / version := "1.0"
 ThisBuild / organization := "org.example.quiz"
 
