@@ -2,11 +2,7 @@ package org.example.quiz.dao
 
 import scala.concurrent.ExecutionContext
 
-import io.getquill.{PostgresJAsyncContext, SnakeCase}
+class Dao()(implicit ec: ExecutionContext) {
 
-class Dao(ctx: PostgresJAsyncContext[SnakeCase.type])(implicit
-    ec: ExecutionContext
-) {
-
-  val generic = new GenericDao(ctx)
+  val generic = new GenericDao()
 }

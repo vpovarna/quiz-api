@@ -1,3 +1,7 @@
+-- Database
+CREATE DATABASE quizdb;
+\c quizdb;
+
 CREATE TABLE IF NOT EXISTS category (
                                         id SERIAL,
                                         name VARCHAR NOT NULL UNIQUE,
@@ -22,6 +26,6 @@ CREATE TABLE IF NOT EXISTS answer (
     );
 
 /* Data copied from Open Trivia DB - https://opentdb.com/ */
-COPY category(id, name) FROM '/data/categories.csv' DELIMITER ',' CSV HEADER;
+COPY category(id, name) FROM '/docker-entrypoint-initdb.d/data/categories.csv' DELIMITER ',' CSV HEADER;
 -- COPY question(id, text, category_id) FROM '/data/questions.csv' DELIMITER ',' CSV HEADER;
 -- COPY answer(id, question_id, text, is_correct) FROM '/data/answers.csv' DELIMITER ',' CSV HEADER;
