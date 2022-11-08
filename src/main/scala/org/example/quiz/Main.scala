@@ -12,7 +12,7 @@ import org.http4s.server.blaze.BlazeServerBuilder
 
 object Main extends IOApp {
 
-  private val dao = new Dao()(ExecutionContext.global)
+  private val dao = new Dao()
   private val services = new Services(dao)
   private val api = new Api(services)
 
