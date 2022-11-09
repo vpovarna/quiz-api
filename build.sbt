@@ -9,10 +9,10 @@ val catsEffectVersion = "3.2.0"
 val http4sVersion = "1.0.0-M21"
 val circeVersion = "0.14.0-M5"
 val logbackVersion = "1.2.3"
-val postgresVersion = "42.2.22"
-val quillPostgresVersion = "3.7.2"
 val scalaTestVersion = "3.2.9"
 val testcontainersPostgresVersion = "1.15.3"
+val doobieVersion = "1.0.0-RC1"
+val newTypeVersion = "0.4.4"
 
 libraryDependencies ++= Seq(
   "org.typelevel" %% "cats-core" % catsVersion,
@@ -23,12 +23,13 @@ libraryDependencies ++= Seq(
   "io.circe" %% "circe-generic" % circeVersion,
 
   // Repository
-  "io.getquill" %% "quill-jasync-postgres" % quillPostgresVersion,
-  "org.postgresql" % "postgresql" % postgresVersion,
+  "org.tpolecat" %% "doobie-core" % doobieVersion,
+  "org.tpolecat" %% "doobie-postgres" % doobieVersion,
+  "org.tpolecat" %% "doobie-hikari" % doobieVersion,
+  "io.estatico" %% "newtype" % newTypeVersion,
 
   // Logs
   "ch.qos.logback" % "logback-classic" % logbackVersion,
-
   "org.testcontainers" % "postgresql" % testcontainersPostgresVersion,
 
   // Test libs

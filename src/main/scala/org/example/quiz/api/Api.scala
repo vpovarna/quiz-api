@@ -4,4 +4,5 @@ import org.example.quiz.service.Services
 
 class Api(services: Services) {
   val generic = new GenericApi(services.generic)
+  val categories = new CategoryApi(services.category)
 }
