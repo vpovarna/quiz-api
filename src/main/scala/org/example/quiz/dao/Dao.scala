@@ -12,5 +12,5 @@ class Dao() {
     "docker"
   )
   val generic = new GenericDao(xa)
-  val category: CategoryDao = new CategoryDaoImpl(xa)
+  val category: CategoryDao = new CategoryDao(xa)
 }

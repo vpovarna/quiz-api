@@ -17,7 +17,8 @@ object Main extends IOApp {
   private val api = new Api(services)
 
   private val httpApp = Router(
-    "/" -> api.generic.routes
+    "/" -> api.generic.routes,
+    "categories" -> api.categories.routes
   ).orNotFound
 
   private def stream(args: List[String]): fs2.Stream[IO, ExitCode] =
