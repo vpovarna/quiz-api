@@ -13,4 +13,7 @@ class Dao() {
   )
   val generic = new GenericDao(xa)
   val category: CategoryDao = new CategoryDao(xa)
+  val questionAnswerDao: QuestionAnswerDao = new QuestionAnswerDao(xa)
+  val questionDao: QuestionDao = new QuestionDao(xa)
+  val answerDao: AnswerDao = new AnswerDao(xa)
 }
